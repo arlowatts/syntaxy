@@ -1,3 +1,6 @@
+/**
+ * A `Concatenation` matches a `String` if the `String` can be partitioned such that each of the `Concatenation`'s children matches one partition, in the order they are given in the `Concatenation`.
+ **/
 public class Concatenation implements Expression {
     private static final String BEGINNING = "( ";
     private static final String ENDING = " )";
@@ -5,6 +8,10 @@ public class Concatenation implements Expression {
 
     private Expression[] expressions;
 
+    /**
+     * Initializes a newly created `Concatenation` with the given array of `Expression`s.
+     * @param expressions an array of `Expression`s.
+     **/
     public Concatenation(Expression... expressions) {
         this.expressions = expressions;
     }
