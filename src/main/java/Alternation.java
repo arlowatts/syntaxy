@@ -1,3 +1,6 @@
+/**
+ * An `Alternation` matches a `String` if any of its children matches that `String`.
+ **/
 public class Alternation implements Expression {
     private static final String BEGINNING = "( ";
     private static final String ENDING = " )";
@@ -5,6 +8,10 @@ public class Alternation implements Expression {
 
     private Expression[] expressions;
 
+    /**
+     * Initializes a newly created `Alternation` with the given array of `Expression`s.
+     * @param expressions an array of `Expression`s.
+     **/
     public Alternation(Expression... expressions) {
         this.expressions = expressions;
     }
